@@ -1,18 +1,23 @@
 // src/app/page.tsx
 // import Header from "./components/Header";
 import Banner from "./components/Banner";
-import StoreList from "./components/StoreList";
-import FeaturedProducts from "./components/FeaturedProducts";
+import Categories from "./components/Categories";
+// import { CartProvider } from "../context/CartContext";
 // import Footer from "./components/Footer";
+
+export const metadata = {
+  title: {
+    template: "%s / Wizard",
+    default: "Wizard",
+  },
+  description: "Luxurious multi store delivery app",
+};
 
 export default function HomePage() {
   return (
-    <div>
-      {/* <Header /> */}
+    <div className="h-screen">
       <Banner />
-      <StoreList />
-      <FeaturedProducts />
-      {/* <Footer /> */}
+      <Categories />
     </div>
   );
 }
